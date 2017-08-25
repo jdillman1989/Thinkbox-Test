@@ -1,0 +1,4 @@
+.DS_Store
+bin/config.sh
+bin/installStaging.sh
+node_modules/*
