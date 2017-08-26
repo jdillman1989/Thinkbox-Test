@@ -10,7 +10,7 @@ gulp.task('default', function () {
 	.pipe(uglify())
 	.pipe(gulp.dest('./public/assets/js'));
 
-	gulp.src('./styles/**/*.scss')
+	gulp.src('./assets/sass/**/*.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(gulp.dest('./public/assets/css'));
 
