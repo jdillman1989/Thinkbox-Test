@@ -10,6 +10,10 @@ gulp.task('default', function () {
 	.pipe(uglify())
 	.pipe(gulp.dest('./public/assets/js'));
 
+	gulp.src('./assets/js/vendor/*.js')
+	.pipe(uglify())
+	.pipe(gulp.dest('./public/assets/js/vendor'));
+
 	gulp.src('./assets/sass/**/*.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(gulp.dest('./public/assets/css'));
