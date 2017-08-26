@@ -2,3 +2,4 @@
 bin/config.sh
 bin/installStaging.sh
 node_modules/*
+public/*
