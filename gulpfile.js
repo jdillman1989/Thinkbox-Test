@@ -3,7 +3,8 @@
 var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	sass = require('gulp-sass'),
-	imagemin = require('gulp-imagemin');
+	imagemin = require('gulp-imagemin'),
+	twig = require('gulp-twig');
 
 gulp.task('default', function () {
 	gulp.src('./assets/js/*.js')
@@ -23,5 +24,6 @@ gulp.task('default', function () {
 	.pipe(gulp.dest('./public/assets/img'));
 
 	gulp.src('./*.html')
+	.pipe(twig())
 	.pipe(gulp.dest('./public'));
 });

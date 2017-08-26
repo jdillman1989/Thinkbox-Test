@@ -8,7 +8,30 @@
 <body>
 	<main>
 		<header>
-			<h1>Header</h1>
+			<div id="mobileNav" class="mobile-nav">
+				<div class="line animate"></div>
+				<div class="line animate"></div>
+				<div class="line animate"></div>
+			</div>
+			<div class="top-bar">
+				<div class="logo">
+					{% include "assets/img/logo.svg" %}
+				</div>
+				<div class="menu">
+					<nav>
+						<a href="#">Lifestyle</a>
+						<a href="#">Products</a>
+						<a href="#">Contact</a>
+					</nav>
+					<a href="#" class="search-icon">
+						{% include "assets/img/search.svg" %}
+					</a>
+					<form method="get" action="">
+						<input type="text" id="term" name="term" placeholder="Search">
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
 		</header>
 		<section>
 			<article>
