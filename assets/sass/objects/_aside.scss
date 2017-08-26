@@ -1,0 +1,27 @@
+aside.side-menu{
+	position: fixed;
+	top: 90px;
+	right: 100%;
+	background-color: $primary; 
+	z-index: 9;
+	width: 300px; 
+	padding: 25px;
+	
+	nav{
+		a{
+			display: block;
+			padding: 10px 20px;
+			text-transform: uppercase;
+			color: $white;
+			font-size: $fontsizeS;
+			font-family: $label;
+			font-weight: 400;  
+			text-decoration: none;
+			background-color: $primary; 
+			
+			&:hover{
+				background-color: darken($primary, 5%); 
+			}
+		}
+	}
+}

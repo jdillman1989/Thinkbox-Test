@@ -1,3 +1,12 @@
 *{
   box-sizing: border-box;
 }
+
+.animate{
+	transition: all 0.4s ease;
+}
+
+svg{
+	width: auto;
+	height: 100%; 
+}

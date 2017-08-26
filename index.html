@@ -7,38 +7,43 @@
 </head>
 <body>
 	<main>
-		<header>
+		<header class="site-header">
 			<div id="mobileNav" class="mobile-nav">
 				<div class="line animate"></div>
 				<div class="line animate"></div>
 				<div class="line animate"></div>
 			</div>
 			<div class="top-bar">
-				<div class="logo">
+				<a href="/" class="logo">
 					{% include "assets/img/logo.svg" %}
-				</div>
+				</a>
 				<div class="menu">
-					<nav>
-						<a href="#">Lifestyle</a>
-						<a href="#">Products</a>
-						<a href="#">Contact</a>
+					<nav id="mainNav">
+						<a href="#" class="animate">Lifestyle</a>
+						<a href="#" class="animate">Products</a>
+						<a href="#" class="animate">Contact</a>
 					</nav>
-					<a href="#" class="search-icon">
+					<a href="#" id="searchIcon" class="search-icon animate">
 						{% include "assets/img/search.svg" %}
 					</a>
-					<form method="get" action="">
-						<input type="text" id="term" name="term" placeholder="Search">
-						<button type="submit">Submit</button>
+					<form id="searchForm" class="search-form animate" method="get" action="">
+						<div class="search-form-layout">
+							<input type="text" id="term" name="term" placeholder="Search">
+							<button type="submit">
+								{% include "assets/img/search.svg" %}
+							</button>
+						</div>
 					</form>
 				</div>
 			</div>
 		</header>
-		<section>
+		<section class="site-content">
 			<article>
 			<img src="https://68.media.tumblr.com/614e51f45367906c84c74b178a9d5a98/tumblr_om85n0waWL1r2hy3ro1_500.gif">
 				<p>This is the initial setup for the Thinkbox test</p>
 			</article>
 		</section>
+		<aside id="sideMenu" class="side-menu animate"></aside>
 		<footer>
 			<p>&copy; 2017</p>
 		</footer>

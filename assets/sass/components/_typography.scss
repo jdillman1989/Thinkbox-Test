@@ -1,10 +1,68 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400italic,700);
-@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800i|Source+Sans+Pro');
 
-$sans: "Source Sans Pro", sans-serif;
-$serif: "Crimson Text", serif;
+$label: 'Montserrat', sans-serif;
+$body: 'Source Sans Pro', sans-serif;
 
-$fontsizeXL: 3.5;
-$fontsizeL: 2;
-$fontsizeM: 1.5;
-$fontsizeS: 1;
+$fontsizeXL: 3em;
+$fontsizeL: 2em;
+$fontsizeM: 1.5em;
+$fontsizeS: 1em;
+$fontsizeXS: 0.9em;
+$fontsizeMargin: 0.5em;
+
+a{
+	text-decoration: underline;
+	color: $secondary;
+}
+
+strong{
+	font-weight: bold;
+}
+
+em{
+	font-style: italic;
+}
+
+p{
+	font-size: $fontsizeS;
+	font-family: $body; 
+	line-height: 1.2; 
+	margin-bottom: $fontsizeM;
+}
+
+ul{
+	list-style: disc outside;
+	margin-left: 1em;
+	margin-bottom: $fontsizeMargin;
+	font-size: $fontsizeS;
+	font-family: $body;
+	line-height: 1.2;
+	
+	li{
+	    // padding-left: 1em; 
+	    // text-indent: -0.6em;
+	    // margin-left: 0.3em;
+	}
+}
+
+h3{
+	font-size: $fontsizeM;
+	font-family: $label;
+	margin-bottom: $fontsizeMargin;
+}
+
+h2{
+	font-size: $fontsizeL;
+	font-family: $label;
+	margin-bottom: $fontsizeMargin;
+}
+
+h1{
+	font-size: $fontsizeXL;
+	font-family: $label;
+	margin-bottom: $fontsizeMargin;
+}
+
+body{
+	letter-spacing: 0.04em;
+}

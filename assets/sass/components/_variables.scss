@@ -1,8 +1,14 @@
-$mobile: "(max-width: 767px)";
-$tablet: "(min-width: 768px)";
-$desktop: "(min-width: 1024px)";
-
-$vpadding: 100;
+$breakPoint1: 1200px;
+$breakPoint2: 950px;
+$breakPoint3: 760px;
+$breakPoint4: 420px;
 
 $black: #000;
 $white: #FFF;
+
+$primary: #0091FB;
+$secondary: #BBDF69;
+$tertiary: #1C1D21;
+
+$textPrimary: #1C1D21;
+$textSecondary: #A4A4A4;
