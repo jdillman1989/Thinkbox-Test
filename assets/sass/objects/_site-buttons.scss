@@ -1,0 +1,17 @@
+.tnc-button{
+	display: inline-block;
+	width: auto;
+	padding: 15px 45px;
+	border: 2px solid $textPrimary;
+	text-transform: uppercase;
+	color: $textPrimary;
+	font-family: $label;
+	font-size: $fontsizeS;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	
+	&:hover{
+		background-color: $textPrimary;
+		color: $white; 
+	}
+}
