@@ -1,4 +1,207 @@
 section.site-content{
 	position: relative;
-	top: 50px;
+	top: 91px;
+	
+	.welcome{
+		height: calc(90vh - 91px);
+		min-height: 400px;
+		position: relative;
+		margin-bottom: 340px;
+		background-position: top right; 
+		background-size: 93%; 
+		background-repeat: no-repeat;
+		
+		@include breakpoint($breakPoint3) {
+			background-size: cover;
+		}
+		
+		.welcome-text{
+			position: absolute;
+			right: 0;
+			top: 22vw;
+			background-color: rgba(28, 29, 33, 0.8);
+			padding: 3px 50px 0 0;
+			text-align: right;
+			width: 330px; 
+			text-transform: uppercase;
+			
+			@include breakpoint($breakPoint2) {
+				top: 18vw;
+			}
+
+			@include breakpoint($breakPoint3) {
+				top: 45vw;
+			}
+			
+			h1{
+				color: $white;
+				font-style: italic;
+				font-weight: 700;
+				font-size: 4.5em;
+				line-height: 0.8;
+				margin-bottom: 20px;
+				z-index: 7; 
+				position: relative;   
+			}
+
+			h2{
+				color: $primary;
+				font-weight: 400;
+				font-size: 1.6em; 
+				position: absolute;
+				top: -15px;
+				left: -60px;
+				z-index: 6; 
+			}
+		}
+
+		.welcome-video{
+			position: absolute;
+			right: 380px;
+			top: 30vw;
+			
+			@include breakpoint($breakPoint1) {
+				top: 30vw;
+			}
+
+			@include breakpoint($breakPoint3) {
+				top: auto;
+				right: auto;
+				left: 15px;
+				bottom: 15px; 
+			}
+			
+			.welcome-video-play{
+				display: flex;
+				align-items: center;
+				padding-bottom: 200px; 
+				
+				&:hover{
+					.welcome-video-text{
+						transform: rotate(0deg) translate(0, 50px);
+					}
+
+					.welcome-video-icon{
+						transform: translate(0, 50px); 
+					}
+				}
+
+				@include breakpoint($breakPoint1) {
+					padding-bottom: 20px;
+					
+					&:hover{
+						.welcome-video-text{
+							transform: translate(10px, 0);
+						}
+
+						.welcome-video-icon{
+							transform: translate(10px, 0); 
+						}
+					}
+				}
+
+				.welcome-video-icon{
+					width: 50px;
+					
+					@include breakpoint($breakPoint3) {
+						width: 35px;
+					}
+					
+					.circle,.circle2{
+						fill: none;
+					}
+
+					.circle{
+						stroke: $secondary;
+						stroke-width: 1.5px;
+					}
+
+					.triangle{
+						fill: $secondary;
+					}
+
+					.circle1{
+						stroke: none;
+					}
+				}
+
+				.welcome-video-text{
+					margin: 0 20px 0 0; 
+					transform-origin: 126% 50%;
+					color: $secondary;
+					
+					@include breakpoint($breakPoint1) {
+						margin: 0 10px 0 0; 
+						transform: rotate(0deg);
+					}
+				}
+			}
+			iframe{
+				display: none;
+			}
+		}
+
+		.welcome-help{
+			position: absolute;
+			left: 3.5%;
+			top: 55%;
+			
+			@include breakpoint($breakPoint1) {
+				top: 40%;
+			}
+			
+			@include breakpoint($breakPoint3) {
+				top: auto;
+				left: 15px;
+				bottom: 80px; 
+			}
+			
+			.welcome-help-text{
+				transform-origin: 0;
+				color: $textSecondary; 
+				padding: 15px 30px;
+				
+				&:hover{
+					transform: rotate(-90deg) translate(10px, 0);
+					color: $primary; 
+				}
+
+				@include breakpoint($breakPoint3) {
+					transform: rotate(0deg);
+					color: $white; 
+					padding: 15px 0;
+					
+					&:hover{
+						transform: translate(10px, 0); 
+					}
+				}
+			}
+
+			.welcome-help-display{
+				display: none;
+			}
+		}
+
+		.green-box{
+			background-color: $secondary;
+			height: 300px;
+			width: 46%;
+			position: absolute;
+			left: 0;
+			top: 35vw;
+			z-index: -1;
+			
+			@include breakpoint($breakPoint1) {
+				height: 230px;
+			}
+
+			@include breakpoint($breakPoint2) {
+				height: 200px;
+			}
+
+			@include breakpoint($breakPoint3) {
+				display: none;
+			}
+		}
+	}
 }

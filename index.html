@@ -38,16 +38,58 @@
 			</div>
 		</header>
 		<section class="site-content">
-			<article>
-			<img src="https://68.media.tumblr.com/614e51f45367906c84c74b178a9d5a98/tumblr_om85n0waWL1r2hy3ro1_500.gif">
-				<p>This is the initial setup for the Thinkbox test</p>
+			<article class="welcome" style="background-image:url(assets/img/cliffs.png);">
+				<div class="welcome-text rellax" data-rellax-speed="2">
+					<h2>Welcome to the</h2>
+					<h1>Great Lake State</h1>
+				</div>
+				<div class="welcome-video">
+					<a id="welcomeVideo" class="welcome-video-play lightbox" data-lb="welcomeVideoEmbed" href="https://youtu.be/U4pMQv46vz4">
+						<p class="welcome-video-text text-rotate animate">Watch a dope video</p>
+						<div class="welcome-video-icon animate">
+							{% include "assets/img/play.svg" %}
+						</div>
+					</a>
+					<iframe id="welcomeVideoEmbed" src="https://www.youtube.com/embed/U4pMQv46vz4" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="welcome-help">
+					<a href="#" class="welcome-help-text text-rotate animate lightbox" data-lb="welcomeHelp">Need help? Click here</a>
+					<div id="welcomeHelp" class="welcome-help-display">
+						<h2>Who is TNC?</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt lorem eu nulla imperdiet tempus. Suspendisse vulputate tempus velit eget dapibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<h2>Why are we awesome?</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt lorem eu nulla imperdiet tempus. Suspendisse vulputate tempus velit eget dapibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+				<div class="green-box rellax" data-rellax-speed="-2"></div>
 			</article>
 		</section>
 		<aside id="sideMenu" class="side-menu animate"></aside>
 		<footer>
-			<p>&copy; 2017</p>
 		</footer>
 	</main>
+
+	<div class="overlay">
+		<div class="overlay-animation-grid">
+			<div class="overlay-animation"></div>
+			<div class="overlay-animation"></div>
+			<div class="overlay-animation"></div>
+			<div class="overlay-animation"></div>
+			<div class="overlay-animation"></div>
+			<div class="overlay-animation"></div>
+			<div class="overlay-animation"></div>
+			<div class="overlay-animation"></div>
+			<div class="overlay-animation"></div>
+			<div class="overlay-animation"></div>
+		</div>
+		<div class="lightbox-container">
+			<div class="lightbox-content"></div>
+		</div>
+		<div class="close">
+			{% include "assets/img/close.svg" %}
+		</div>
+	</div>
+
 	<script src="assets/js/vendor/aos.js"></script>
 	<script src="assets/js/vendor/rellax.min.js"></script>
 	<script src="assets/js/vendor/swiper.jquery.min.js"></script>
