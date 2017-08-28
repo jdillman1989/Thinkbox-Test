@@ -124,6 +124,32 @@ $(document).ready(function(){
 		}, 600);
 	};
 
+	// Accordion
+	$('.accordion-toggle').click( function() {
+		$(this).toggleClass('active');
+		$(this).next('.accordion-content').slideToggle(300);
+	});
+
+	// Email validation
+	var email = $('#email'),
+		regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/,
+		emailSubmit = $('#emailSubmit');
+
+	email.on("change paste keyup", function() {
+	    var val = $(this).val();
+		var emailValidate = regex.test(val);
+	    if (emailValidate) {
+	    	emailSubmit.css({
+	    		"transform":"translate(10px, 0px)",
+	    	});
+	    } 
+	    else{
+	    	emailSubmit.css({
+	    		"transform":"translate(-105%, 0px)",
+	    	});
+	    };
+	});
+
 	var rellax = new Rellax('.rellax');
 	AOS.init();
     var swiper = new Swiper('.swiper-container', {
@@ -131,6 +157,9 @@ $(document).ready(function(){
         paginationClickable: true,
         nextButton: '.next',
         prevButton: '.prev',
-        spaceBetween: 30
+        spaceBetween: 30,
+        loop: true,
+		autoplay: 3000,
+        autoplayDisableOnInteraction: true
     });
 });

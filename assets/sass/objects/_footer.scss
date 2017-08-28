@@ -1,3 +1,56 @@
 footer{
+	padding: 40px;
+	background-color: $tertiary;
+	color: $white;
+	text-transform: uppercase;
+	font-family: $label;
+	font-size: 0.8em;
+	font-weight: 600;
+	text-align: center; 
+	
+	.footer-social{
+		width: 300px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 5px;
+		 
+		a{
+			width: 20%;
+			height: auto;
+			padding: 10px;
+		}
 
+		.facebook, .instagram, .twitter{
+			width: 17%;
+			padding: 12px;
+		}
+	}
+
+	.footer-copyright{
+		margin-bottom: 5px;
+		
+		p{
+			margin-bottom: 0;
+		}
+	}
+
+	.footer-link{
+		width: 250px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		a{
+			color: $white;
+			text-transform: uppercase;
+			font-family: $label;
+			font-size: 0.8em;
+			font-weight: 600;
+			text-align: center;
+			padding: 10px; 
+		}
+	}
 }

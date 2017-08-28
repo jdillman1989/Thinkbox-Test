@@ -1,6 +1,6 @@
 section.site-content{
 	position: relative;
-	top: 91px;
+	padding-top: 91px;
 	
 	.welcome{
 		height: calc(90vh - 91px);
@@ -55,9 +55,9 @@ section.site-content{
 			}
 
 			h2{
-				color: $primary;
 				font-weight: 400;
 				font-size: 1.6em; 
+				font-style: normal;
 				position: absolute;
 				top: -15px;
 				left: -60px;
@@ -288,26 +288,15 @@ section.site-content{
 			.content-text{
 
 				h2{
-					color: $primary;
-					font-style: italic;
-					font-weight: 700;
-					font-size: 3.5em;
-					line-height: 1;
 					margin-bottom: 45px;
-					text-transform: uppercase;
 				}
 
 				p{
 					margin-bottom: 65px; 
-					line-height: 1.7; 
 					
 					@include breakpoint($breakPoint1) {
 						margin-bottom: 40px;
 					}
-				}
-
-				.tnc-button{
-					
 				}
 			}
 		}
@@ -357,7 +346,7 @@ section.site-content{
 
 	.slider{
 		position: relative;
-		margin-bottom: 200px;
+		margin-bottom: 300px;
 		 
 		.swiper-container {
 			width: 100%;
@@ -510,8 +499,322 @@ section.site-content{
 				
 				p{
 					margin-bottom: 0;
-					line-height: 1.7;
 				}  
+			}
+		}
+	}
+
+	.faqs{
+		margin-bottom: 200px;
+		
+		@include breakpoint($breakPoint3) {
+			margin-bottom: 100px;
+		}
+		
+		.faqs-header{
+			position: relative;
+			text-align: center;
+			
+			.text-rotate{
+				position: absolute;
+				top: -130px;
+				color: $textSecondary;
+				width: 100%;
+			}
+
+			h2{
+				text-transform: none; 
+				margin-bottom: 60px; 
+			}
+		}
+		
+		.accordion {
+			width: 60%;
+			
+			@include breakpoint($breakPoint2) {
+				width: 80%;
+			}
+
+			@include breakpoint($breakPoint3) {
+				width: 85%;
+			}
+		}
+	}
+
+	.feature{
+		margin-bottom: 400px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		
+		@include breakpoint($breakPoint3) {
+			margin-bottom: 300px;
+		}
+		
+		.feature-images{
+			width: 55%;
+			position: relative;
+			height: 70vh;
+			
+			@include breakpoint($breakPoint2) {
+				width: 50%;  
+			}
+
+			@include breakpoint($breakPoint3) {
+				display: none;
+			}
+			 
+			.dark-box{
+				position: absolute;
+				width: 85%;
+				height: 90%; 
+				left: 0;
+				top: 430px;
+				background-color: $tertiary;
+			}
+
+			.feature-layer-one{
+				position: absolute;
+				height: 60vh;
+				width: auto;
+				bottom: 0;
+				right: 0;
+				
+				@include breakpoint($breakPoint1) {
+					height: 50vh; 
+				}
+			}
+
+			.feature-layer-two{
+				position: absolute;
+				height: auto;
+				width: 50%;
+				top: -40px;
+				left: 0;
+			}
+		}
+
+		.feature-content{
+			width: 45%;
+			padding: 60px;
+			
+			@include breakpoint($breakPoint2) {
+				width: 50%;
+				padding: 45px;  
+			}
+
+			@include breakpoint($breakPoint3) {
+				width: 100%;
+				padding: 40px;  
+			}
+			 
+			h2{
+				margin-bottom: 45px;
+				color: $secondary; 
+			}
+
+			p{
+				margin-bottom: 65px; 
+				
+				@include breakpoint($breakPoint1) {
+					margin-bottom: 40px;
+				}
+			}
+		}
+	}
+
+	.cta{
+		margin-bottom: 10px;
+		position: relative;
+		z-index: 3; 
+		
+		.cta-header{
+			position: relative;
+			text-align: center;
+			
+			.text-rotate{
+				position: absolute;
+				top: -130px;
+				color: $textSecondary;
+				width: 100%;
+			}
+		}
+
+		.cta-images{
+			display: flex;
+			flex-wrap: wrap;
+			width: 85%;
+			margin: 0 auto;
+			justify-content: center;
+			align-items: flex-start;
+			position: relative;
+			
+			@include breakpoint($breakPoint3) {
+				width: 100%;
+			}
+			 
+			.cta-back-image{
+				position: absolute;
+				right: 20px;
+				top: 800px;
+				z-index: -1;
+				width: 20vw;
+				height: 20vw;
+				
+				@include breakpoint($breakPoint3) {
+					right: 5px;
+				}
+				
+				svg{
+					width: 100%;
+					height: 100%;  
+					
+					path{
+						fill: #F4F4F4;
+					}
+				}
+			}
+
+			.cta-top-image{
+				width: 60%;
+				height: auto;
+				margin-bottom: 30px;
+				
+				@include breakpoint($breakPoint3) {
+					margin-bottom: 20px;
+					width: 75%;
+				} 
+			}
+
+			.cta-left-image{
+				width: 45%;
+				height: auto;
+				margin-right: 15px; 
+
+				@include breakpoint($breakPoint3) {
+					margin-right: 10px;
+				} 
+			}
+
+			.cta-right-image{
+				width: 40%;
+				height: auto;
+				margin-left: 15px;
+				
+				@include breakpoint($breakPoint3) {
+					margin-left: 10px;
+				}
+			}
+		}
+
+		.cta-content{
+			position: absolute;
+			top: 55%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: rgba(255, 255, 255, 0.95); 
+			padding: 60px 80px;
+			text-align: center; 
+			display: inline-block;
+			
+			@include breakpoint($breakPoint1) {
+				padding: 20px 30px;
+			}
+			
+			h2{
+				margin-bottom: 20px; 
+			}
+		}
+	}
+
+	.signup{
+		padding: 30vw 0 8vw 0; 
+		background-position: bottom center; 
+		background-size: cover; 
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 2; 
+		margin-top: -10vw;
+		
+		@include breakpoint($breakPoint2) {
+			padding: 35vw 0 10vw 0;
+		}
+		
+		.signup-input{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 20px; 
+			
+			@include breakpoint($breakPoint3) {
+				flex-wrap: wrap;
+			}
+			
+			h3{
+				margin-top: 3px; 
+				margin-right: 40px;
+				
+				@include breakpoint($breakPoint3) {
+					width: 100%;
+					margin-bottom: 15px; 
+					text-align: center; 
+				}
+			}
+
+			.signup-form{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 200px;
+				position: relative;
+				
+				@include breakpoint($breakPoint3) {
+					left: -3vw; 
+				}
+				
+				input{
+					background-color: $white;
+					border: none;
+					padding: 10px;
+					width: 100%;
+					color: $textPrimary;
+					font-size: $fontsizeS;
+					font-family: $body; 
+					line-height: 1.2;  
+				}
+
+				button{
+					position: absolute;
+					background-color: $tertiary;
+					border: none;
+					padding: 12px;
+					color: $white;
+					text-transform: uppercase;
+					font-family: $label;
+					font-size: 0.8em;
+					font-weight: 600;
+					transform: translate(-107%, 0);
+					z-index: -1; 
+					
+					&:hover{
+						cursor: pointer;
+						background-color: $white;
+						color: $tertiary;
+					}
+				}
+			}
+		}
+
+		.signup-contact{
+			text-align: center;
+			
+			h3{
+				font-size: 0.9em;
+				
+				a{
+					color: $tertiary;
+					text-decoration: none; 
+				}
 			}
 		}
 	}

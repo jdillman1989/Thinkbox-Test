@@ -26,8 +26,9 @@ em{
 p{
 	font-size: $fontsizeS;
 	font-family: $body; 
-	line-height: 1.2; 
+	line-height: 1.7; 
 	margin-bottom: $fontsizeM;
+	letter-spacing: normal;
 }
 
 ul{
@@ -46,13 +47,20 @@ ul{
 }
 
 h3{
-	font-size: $fontsizeM;
+	text-transform: uppercase;
+	color: $textPrimary;
 	font-family: $label;
-	margin-bottom: $fontsizeMargin;
+	font-size: $fontsizeS;
+	font-weight: 600;
 }
 
 h2{
-	font-size: $fontsizeL;
+	color: $primary;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 3.5em;
+	line-height: 1;
+	text-transform: uppercase;
 	font-family: $label;
 	margin-bottom: $fontsizeMargin;
 }
