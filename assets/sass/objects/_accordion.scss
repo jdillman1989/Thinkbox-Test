@@ -1,0 +1,39 @@
+.accordion {
+	margin: 0 auto;
+	
+	.accordion-toggle {
+		color: $primary;
+		background-color: #ECECEC;
+		padding: 20px 60px 20px 20px;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-size: 1em;
+		font-weight: 600; 
+		position: relative;
+		margin-bottom: 12px;
+		font-style: normal; 
+		
+		&:after {
+			content: "View";
+			color: $textSecondary;
+			position: absolute;
+			right: 20px;
+			top: 45%;
+			font-size: 0.6em;
+			font-weight: 600; 
+		}
+	}
+
+	.accordion-toggle.active:after{
+		content: "Close";
+	}
+
+	.accordion-content {
+		display: none;
+		padding: 30px 50px 50px 50px;
+		
+		@include breakpoint($breakPoint3) {
+			padding: 20px 30px 30px 30px;
+		}
+	}
+}
