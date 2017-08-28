@@ -217,7 +217,7 @@ section.site-content{
 
 	.content{
 		position: relative;
-		margin-bottom: 250px;
+		margin-bottom: 200px;
 		display: flex;
 		justify-content: center;
 		
@@ -351,6 +351,167 @@ section.site-content{
 
 			@include breakpoint($breakPoint3) {
 				display: none;
+			}
+		}
+	}
+
+	.slider{
+		position: relative;
+		margin-bottom: 200px;
+		 
+		.swiper-container {
+			width: 100%;
+			height: 70vh;
+			position: relative;
+			
+			.swiper-wrapper{
+				
+				.swiper-slide {
+					background-position: center center; 
+					background-size: cover; 
+					background-repeat: no-repeat;
+				}
+			}
+		}
+
+		.swiper-nav{
+			position: absolute;
+			left: 0;
+			bottom: -20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 120px;
+			z-index: 9;  
+			
+			.swiper-pagination{
+				width: 100%; 
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 15px 0;
+				position: static;
+				
+				.swiper-pagination-bullet{
+					background: transparent; 
+					border: 1.5px solid $white; 
+					margin-bottom: 7px;
+					opacity: 1;
+					width: 11px;
+					height: 11px;
+					
+					&.swiper-pagination-bullet-active{
+						background: $primary;
+						border-color: $primary;  
+					} 
+				}
+			}
+
+			.swiper-button{
+				width: 50%;
+				background-color: $textSecondary; 
+				display: flex;
+				align-items: center;
+				padding: 10px;
+				cursor: pointer;
+				
+				&:hover{
+					background-color: $primary; 
+				}
+				
+				&.next{
+					justify-content: flex-end;
+					
+					&:hover{
+						
+						img{
+							transform: translate(-10px, 0);
+						}
+					}
+				}
+
+				&.prev{
+					justify-content: flex-start;
+					
+					img{
+						transform: rotate(180deg);
+					}
+
+					&:hover{
+						
+						img{
+							transform: translate(10px, 0) rotate(180deg);
+						}
+					}
+				} 
+			}
+		}
+
+		.slider-content{
+			position: absolute;
+			right: 10%;
+			bottom: -20px;
+			display: flex;
+			align-items: center;
+			flex-direction: row-reverse;
+			height: 50vh;
+			width: 80vh;
+			z-index: 8;
+			
+			@include breakpoint($breakPoint2) {
+				width: 70vh;
+				height: 30vh;  
+				right: 5%;
+				align-items: flex-end;
+			}
+
+			@include breakpoint($breakPoint3) {
+				right: auto;
+				bottom: auto;
+				top: -20px;
+				left: 0;
+				flex-direction: row;
+				align-items: center; 
+				width: 60vh;
+				height: 30vh;
+			} 
+			
+			img{
+				width: 50%;
+				height: auto;
+				box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+
+				@include breakpoint($breakPoint2) {
+					width: 40%; 
+				}
+			}
+
+			.slider-text{
+				background-color: $primary;
+				padding: 30px;
+				color: $white;
+				position: relative;
+				right: -30px;
+				width: 50%;
+				
+				@include breakpoint($breakPoint2) {
+					padding: 20px; 
+					bottom: -20px;
+					width: 60%;
+					right: -40px; 
+				}
+
+				@include breakpoint($breakPoint3) {
+					right: auto;
+					bottom: auto;
+					left: -20px;
+				} 
+				
+				p{
+					margin-bottom: 0;
+					line-height: 1.7;
+				}  
 			}
 		}
 	}

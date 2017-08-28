@@ -126,4 +126,11 @@ $(document).ready(function(){
 
 	var rellax = new Rellax('.rellax');
 	AOS.init();
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.next',
+        prevButton: '.prev',
+        spaceBetween: 30
+    });
 });
