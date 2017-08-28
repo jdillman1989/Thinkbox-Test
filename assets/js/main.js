@@ -48,7 +48,7 @@ $(document).ready(function(){
 
 	lightboxReset();
 
-	overlay.click(function() {
+	$('.overlay-animation').click(function() {
 		lightboxReset();
 	});
 
@@ -125,10 +125,10 @@ $(document).ready(function(){
 	};
 
 	// Accordion
-	$('.accordion-toggle').click( function() {
+	$('body').on('click', '.accordion-toggle', function() {
 		$(this).toggleClass('active');
 		$(this).next('.accordion-content').slideToggle(300);
-	});
+	})
 
 	// Email validation
 	var email = $('#email'),
