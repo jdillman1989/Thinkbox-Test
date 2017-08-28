@@ -140,12 +140,12 @@ $(document).ready(function(){
 		var emailValidate = regex.test(val);
 	    if (emailValidate) {
 	    	emailSubmit.css({
-	    		"transform":"translate(10px, 0px)",
+	    		"transform":"translate(5px, 0px)",
 	    	});
 	    } 
 	    else{
 	    	emailSubmit.css({
-	    		"transform":"translate(-105%, 0px)",
+	    		"transform":"translate(-115%, 0px)",
 	    	});
 	    };
 	});

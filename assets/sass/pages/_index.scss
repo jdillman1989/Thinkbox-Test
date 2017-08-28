@@ -785,6 +785,8 @@ section.site-content{
 
 				button{
 					position: absolute;
+					top: 0;
+					left: 103%;
 					background-color: $tertiary;
 					border: none;
 					padding: 12px;
@@ -793,7 +795,7 @@ section.site-content{
 					font-family: $label;
 					font-size: 0.8em;
 					font-weight: 600;
-					transform: translate(-107%, 0);
+					transform: translate(-115%, 0);
 					z-index: -1; 
 					
 					&:hover{
