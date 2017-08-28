@@ -1,6 +1,9 @@
 section.site-content{
 	position: relative;
 	padding-top: 91px;
+	margin: 0 auto;
+	max-width: 1680px;
+	overflow-x: hidden;
 	
 	.welcome{
 		height: calc(90vh - 91px);
