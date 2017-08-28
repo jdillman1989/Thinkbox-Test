@@ -185,3 +185,9 @@ header.site-header{
 		}
 	}
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .site-header svg{
+    	height: 36px;
+    }
+}

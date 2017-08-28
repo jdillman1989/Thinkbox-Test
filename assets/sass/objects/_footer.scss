@@ -54,3 +54,9 @@ footer{
 		}
 	}
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    footer .footer-social a svg{
+    	height: 30px;
+    }
+}
