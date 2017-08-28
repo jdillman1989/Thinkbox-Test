@@ -478,6 +478,10 @@ section.site-content{
 				@include breakpoint($breakPoint2) {
 					width: 40%; 
 				}
+
+				@include breakpoint($breakPoint3) {
+					display: none; 
+				}
 			}
 
 			.slider-text{
