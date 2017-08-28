@@ -462,12 +462,12 @@ section.site-content{
 			@include breakpoint($breakPoint3) {
 				right: auto;
 				bottom: auto;
-				top: -20px;
+				top: -30px;
 				left: 0;
 				flex-direction: row;
 				align-items: center; 
-				width: 60vh;
-				height: 30vh;
+				width: 90%;
+				height: auto;
 			} 
 			
 			img{
