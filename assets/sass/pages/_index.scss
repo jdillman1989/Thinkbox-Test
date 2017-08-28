@@ -502,7 +502,8 @@ section.site-content{
 				@include breakpoint($breakPoint3) {
 					right: auto;
 					bottom: auto;
-					left: -20px;
+					left: 20px;
+					width: 100%; 
 				} 
 				
 				p{
